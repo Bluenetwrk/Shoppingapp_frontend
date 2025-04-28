@@ -16,13 +16,17 @@ import location from "../img/icons8-location-20.png"
 
 
 const options = [
-  { value: "bangalore", label: "Bangalore, India", img:location},
-  { value: "san Francisco", label: "San Francisco, USA", img:location},
-  { value: "new york", label: "New York, USA", img:location},
-  { value: "sydney", label: "Sydney, Australia", img:location},
-  { value: "london", label: "London, UK", img:  location},
-  { value: "berlin", label: "Berlin, Germany", img:location},
+  { value: "Bangalore", label: "Bangalore, India", img:location},
+  { value: "Yelahaṅka Zone", label: "Yelahaṅka Zone", img:location},
+  { value: "Dasarahal̥l̥i Zone", label: "Dasarahal̥l̥i Zone", img:location},
+  { value: "Bommanahal̥l̥i Zone", label: "Bommanahal̥l̥i Zone", img:location},
+  { value: "South Zone", label: "South Zone", img:  location},
+  { value: "West Zone", label: "West Zone", img:location},
+  { value: "East Zone", label: "East Zone", img:location},
+  { value: "Mahādēvapura Zone", label: "Mahādēvapura Zone", img:location},
+  
 ];
+
 const responsive = {
 
   desktop: {
