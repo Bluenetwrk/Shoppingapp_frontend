@@ -86,32 +86,32 @@ function SidebarNav(props) {
           </div>
           
         {/* <p onClick={()=>{navigate("/")}} className={`${Styles.p} `}>Home </p> */}
-        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px"}}>
-          <img style={{width:"50px",height:"50px" ,borderRadius:"50%"}} src='/vegetable.png'></img>
+        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px", fontSize:"12px"}}>
+          <img style={{width:"40px",height:"40px" ,borderRadius:"50%"}} src='/vegetable.png'></img>
           <p onClick={()=>{navigate("/Blogs"); update("Blogs")}} className={`${Styles.textBigSodeBar} ${value==="Blogs"?Styles.active:""}`}>Fresh Vegetables</p>
         </div>
-        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px"}}>
-          <img style={{width:"50px",height:"50px" ,borderRadius:"50%"}} src='/faal.png'></img>
+        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px", fontSize:"12px"}}>
+          <img style={{width:"40px",height:"40px" ,borderRadius:"50%"}} src='/faal.png'></img>
           <p onClick={()=>{navigate("/AllCareerJobs"); update("AllCareerJobs")}} className={`${Styles.textBigSodeBar} ${value==="AllCareerJobs"?Styles.active:""}`}>Fresh Fruits</p>
         </div>
-        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px"}}>
-        <img style={{width:"50px",height:"50px" ,borderRadius:"50%"}} src='/flowers.png'></img>
+        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px",  fontSize:"12px" }}>
+        <img style={{width:"40px",height:"40px" ,borderRadius:"50%"}} src='/flowers.png'></img>
         <p  className={`${Styles.textBigSodeBar}`}>Flowers&Leaves</p>
         </div> 
-        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px"}}>
-        <img style={{width:"50px",height:"50px" ,borderRadius:"50%"}} src='/seasonal.png'></img>
+        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px",  fontSize:"12px"}}>
+        <img style={{width:"40px",height:"40px",borderRadius:"50%"}} src='/seasonal.png'></img>
         <p onClick={()=>{navigate("/AboutUs"); update("AboutUs")}} className={`${Styles.textBigSodeBar} ${value==="AboutUs"?Styles.active:""} `}>Seasonal Picks</p>
         </div>
-        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px"}}>
-         <img style={{width:"50px",height:"50px" ,borderRadius:"50%"}} src='/leafy.png'></img>
+        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px",  fontSize:"12px"}}>
+         <img style={{width:"40px",height:"40px" ,borderRadius:"50%"}} src='/leafy.png'></img>
          <p onClick={()=>{navigate("/Services"); update("Services")}} className={`${Styles.textBigSodeBar} ${value==="Services"?Styles.active:""}`}>Leafy,Herbs& Seasonings</p>
         </div> 
-        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px"}}>
-        <img style={{width:"50px",height:"50px" ,borderRadius:"50%"}} src='/premium.png'></img>
+        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px",  fontSize:"12px"}}>
+        <img style={{width:"40px",height:"40px" ,borderRadius:"50%"}} src='/premium.png'></img>
         <p onClick={()=>{navigate("/Contact"); update("Contact")}} className={`${Styles.textBigSodeBar} ${value==="Contact"?Styles.active:""}`}>Exotics & Premium</p>
         </div>
-        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px"}}>
-        <img style={{width:"50px",height:"50px" ,borderRadius:"50%"}} src='/sprouts.png'></img>
+        <div style={{display:"flex", marginLeft:"15px", marginTop:"17px",  fontSize:"12px"}}>
+        <img style={{width:"40px",height:"40px" ,borderRadius:"50%"}} src='/sprouts.png'></img>
         <p onClick={()=>{navigate("/TermsAndCondition"); update("TermsAndCondition")}} className={`${Styles.textBigSodeBar} ${value==="TermsAndCondition"?Styles.active:""}`}>Cuts & Sprouts</p>
         </div>
         <div className={Styles.brands}>
