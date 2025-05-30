@@ -15,16 +15,215 @@ import { jobTags } from '../Tags'
 import HTMLReactParser from 'html-react-parser'
 
 const options = [
-  { value: "Bangalore", label: "Bangalore, India", img:location},
-  { value: "Yelahaṅka Zone", label: "Yelahaṅka Zone", img:location},
-  { value: "Dasarahal̥l̥i Zone", label: "Dasarahal̥l̥i Zone", img:location},
-  { value: "Bommanahal̥l̥i Zone", label: "Bommanahal̥l̥i Zone", img:location},
-  { value: "South Zone", label: "South Zone", img:  location},
-  { value: "West Zone", label: "West Zone", img:location},
-  { value: "East Zone", label: "East Zone", img:location},
-  { value: "Mahādēvapura Zone", label: "Mahādēvapura Zone", img:location},
+  { value: "Bangalore", label: "Bangalore,India", img:location},
+  { value: "City Food Centre", label: "City Food Centre", img:location},
+  { value: "Top in Town Super Market", label: "Top in Town Super Market", img:location},
+  { value: "Mano Supermarket", label: "Mano Supermarket", img:location},
+  { value: "Sagar Super Bazaar", label: "Sagar Super Bazaar", img:location},
+  { value: "Carrymart Super Market", label: "Carrymart Super Market", img:  location},
+  { value: "A to z Mart", label: "A to z Mart", img:location},
+  
   
 ];
+const products = [
+  {
+    id: 1,
+    name: 'Atta & Other',
+    weight: '5 kg',
+    price: 300,
+    originalPrice: 500,
+    discount: 15,
+    image: 'aata.png',
+  },
+  {
+    id: 2,
+    name: 'Dals & Pules',
+    weight: '500 g',
+    price: 100,
+    originalPrice: 200,
+    discount: 13,
+    image: 'Dals.png',
+  },
+  {
+    id: 3,
+    name: 'Rice & More',
+    weight:'5kg',
+    price: 350,
+    originalPrice: 400,
+    discount: 16,
+    image: 'Rice.png'
+  },
+  {
+    id: 4,
+    name: 'Seasonal Picks',
+    weight: '500 g',
+    price: 42,
+    originalPrice: 51,
+    discount: 17,
+    image: 'seasonal.png',
+  },
+  {
+    id: 5,
+    name: 'Oil',
+    weight: '50 g',
+    price: 180,
+    originalPrice: 200,
+    discount: 17,
+    image: 'Oil.png'
+  },
+  {
+    id: 6,
+    name: 'Exotics & Premium',
+    weight: '600 - 800 g',
+    price: 500,
+    originalPrice: 700,
+    discount: 61,
+    image: 'premium.png',
+  },
+  {
+    id: 7,
+    name: 'Cuts & Sprouts',
+    weight: '600 - 800 g',
+    price: 100,
+    originalPrice: 150,
+    discount: 61,
+    image: 'sprouts.png'
+  },
+];
+
+const attas = [
+ {
+    id: 1,
+    name: 'Aashirwad',
+    weight: '500 g',
+    price: 100,
+    originalPrice: 200,
+    discount: 13,
+    image: '/images/aata.png',
+  },
+  {
+    id: 2,
+    name: 'Patanjali',
+    weight: '5 kg',
+    price: 100,
+    originalPrice: 200,
+    discount: 13,
+    image: '/images/patanjali.png',
+  },
+  {
+    id: 3,
+    name: 'Fortune',
+    weight:'5kg',
+    price: 350,
+    originalPrice: 400,
+    discount: 16,
+    image: '/images/Fortune.png',
+  },
+  {
+    id: 4,
+    name: 'Shakti Bhog',
+    weight: '5 kg',
+    price: 42,
+    originalPrice: 51,
+    discount: 17,
+    image: '/images/ShaktiBhog.png',
+  },
+  {
+    id: 5,
+    name: 'Rajdhani',
+    weight: '5 kg',
+    price: 180,
+    originalPrice: 200,
+    discount: 17,
+    image: '/images/rajdhani.png',
+  },
+  {
+    id: 6,
+    name: '24 Mantra Organic',
+    weight: '5 kg',
+    price: 500,
+    originalPrice: 700,
+    discount: 61,
+    image: '/images/Mantra.webp',
+  },
+  {
+    id: 7,
+    name: 'Silver coin',
+    weight: '5 kg',
+    price: 535,
+    originalPrice: 150,
+    discount: 61,
+    image: '/images/silver coin.jpg',
+  },
+];
+
+const Dals = [
+  {
+    id: 1,
+    name: ' Unpolished MoongDal',
+    weight: ' 1 kg',
+    price: 190,
+    originalPrice: 238,
+    discount: 20,
+    image: '/images/Dals.png',
+  },
+  {
+    id: 2,
+    name: 'Fortune Arhar Dal',
+    weight: '1 kg',
+    price: 88,
+    originalPrice: 100,
+    discount: 12,
+    image: '/images/Fortune daal.jpg',
+  },
+  {
+    id: 3,
+    name: '24 Mantra Organic',
+    weight:'5kg',
+    price: 350,
+    originalPrice: 400,
+    discount: 16,
+    image: '/images/mantra daal.webp',
+  },
+  {
+    id: 4,
+    name: 'Rajma',
+    weight: '908 g',
+    price: 250,
+    originalPrice: 295,
+    discount: 15,
+    image: '/images/Rajma Red.webp',
+  },
+  {
+    id: 5,
+    name: ' Patanjali Chana Dal',
+    weight: '1 kg',
+    price: 70,
+    originalPrice: 78,
+    discount: 10,
+    image: '/images/patanjaliDaal.png',
+  },
+  {
+    id: 6,
+    name: 'Natureland Organic ',
+    weight: '500 g',
+    price: 160,
+    originalPrice: 188,
+    discount: 15,
+    image: '/images/NatureDall.png',
+  },
+  {
+    id: 7,
+    name: ' BB Popular Moong Dal',
+    weight: '1 kg',
+    price: 125,
+    originalPrice: 147,
+    discount: 15,
+    image: '/images/BBdaal.png',
+  },
+];
+
+
 
 
 const responsive = {
@@ -41,6 +240,7 @@ const responsive = {
     items: 1
   }
 };
+
 
 
 function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjobs, setFiltereredjobs
@@ -89,6 +289,16 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
       navigate("/alljobs")
     }
   }, [])
+
+
+
+
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+    alert(`${product.name} added to cart!`);
+  };
 
   // const [totalCount, settotalCount] = useState()
   // let recordsperpage = JSON.parse(sessionStorage.getItem("recordsperpageHome"))
@@ -183,8 +393,6 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
       setResult(false)
     }
   }
-
-
 
   async function search(e) {
     setNoPageFilter(true)
@@ -282,8 +490,6 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
 
   }
 
-
-  
   const [jobLocation, setjobLocation] = useState("AllL")
   const [jobTitle, setjobTitle] = useState("")
   
@@ -322,8 +528,6 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
         alert("some thing went wrong")
       })
   }
-
-
   async function getBothFiltered(jobTitle) {
 
     await axios.post(`/jobpost/getBothjobFilter/${jobLocation}`, { jobTitle })
@@ -632,6 +836,26 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
   console.log(groceries);
   
   //  const[searchClick,setSearchClick]=useState(false)
+  const scrollRef1 = useRef(null);
+  const scrollRef2 = useRef(null);
+  const scrollRef3 = useRef(null);
+  const scrollRef4 = useRef(null);
+  const scrollRef5 = useRef(null);
+  const scrollRef6 = useRef(null);
+  const scrollRef7 = useRef(null);
+
+  
+  const scrollLeft = (ref) => {
+    if (ref.current) {
+      ref.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = (ref) => {
+    if (ref.current) {
+      ref.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
   
   return (
     <>
@@ -655,6 +879,7 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
             cursor: "pointer",
             fontSize: "24px",
             color: "#007bff",
+            marginTop:"-4px"
           }}
         >
           <img className={styles.jobLocationImage} src={location} alt="Location" />
@@ -721,27 +946,10 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
       )}
     </div>
 
-      {/* <p style={{ marginTop: "10px", fontWeight: "bold" }}>{selectedOption.label}</p> */}
-   
-                      {/* <label className={styles.JobLocationFilter}>
-                        <input type="radio" checked disabled={location == "Chennai" ||
-                          location == "Hyderabad" || location == "Mumbai" || location == "Delhi"} name="filter" onClick={() => { getjobs() }} />{location}</label><br></br> */}
-                    {/* </>
-                  )
-                })
-              } */}
             </div>
-            {/* <div className={styles.HomesearchBothForNavWrapper}>
-              <input className={styles.inputboxsearchNav} type="text" placeholder='Search for a Job / Skills / Location / Experiance' onChange={(e) => { search(e) }} />
-
-              <i style={{ color: "rgb(40, 4, 99)", fontSize: "18px", cursor: "pointer", marginLeft: "2%" }} onClick={() => { searchIcon(searchKey) }}
-                class="fa fa-search" ></i>
-            </div> */}
+           
           </div>
-          {/* {Result ?
-            <h4 style={{ marginLeft: "40%", marginTop: "20px" }}> {jobs.length} matching Result Found  </h4>
-            : ""
-          } */}
+         
         </>
         : ""
       }
@@ -817,223 +1025,254 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
     );
   })}
 </div>
+</div>
 
 
 
-            {/* {
-              jobTags.map((tags, i) => {
-                return (
+{/* <div className={styles.container}>
+  <h2 className={styles.header}>Product List</h2>
+  <div className={styles.grid}>
+    {products.map((product) => (
+      <div key={product.id} className={styles.card}>
+        <div className={styles.discount}>{product.discount}% Off</div>
+        <img src={product.image} alt={product.name} className={styles.image} />
+        <h3 className={styles.name}>{product.name}</h3>
+        <p className={styles.weight}>{product.weight}</p>
+        <p className={styles.price}>
+          ₹{product.price}{' '}
+          <span className={styles.original}>₹{product.originalPrice}</span>
+        </p>
+        <button className={styles.button} onClick={() => addToCart(product)}>
+          Add to Cart
+        </button>
+      </div>
+    ))}
+  </div>
+</div> */}
 
-                  <button disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                    tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                    className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                      styles.TagHeading :
-                      //  Active === tags.value ? 
-                      Active.findIndex((present) => {
-                        return (
-                          present === tags.value
-                        )
-                      }) >= 0 ?
-                        styles.active : styles.JobtitleFilter} onClick={() => { filterByJobTitle(tags.value) }}>{tags.value} </button>
-
-                )
-              })
-            } */}
+{/* ------------------------first----------------- */}
+<div className={styles.container}>
+        <h2 className={styles.header}>Attas&more</h2>
+        <div className={styles.wrapper}>
+          <button className={styles.scrollBtn} onClick={() => scrollLeft(scrollRef1)}>
+            &#8592;
+          </button>
+          <div className={styles.grid} ref={scrollRef1}>
+            {attas.map((product) => (
+              <div key={product.id} className={styles.card}>
+                <div className={styles.discount}>{product.discount}% Off</div>
+                <img src={product.image} alt={product.name} className={styles.image} />
+                <h3 className={styles.name}>{product.name}</h3>
+                <p className={styles.weight}>{product.weight}</p>
+                <p className={styles.price}>
+                  ₹{product.price}{' '}
+                  <span className={styles.original}>₹{product.originalPrice}</span>
+                </p>
+                <button className={styles.button} onClick={() => addToCart(product)}>
+                  Add to Cart
+                </button>
+              </div>
+            ))}
           </div>
+          <button className={styles.scrollBtn} onClick={() => scrollRight(scrollRef1)}>
+            &#8594;
+          </button>
+        </div>
+      </div>
 
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            {nopageFilter ?
-              // <p style={{ fontWeight: 400, marginLeft: "10px" }}>Displaying <span style={{ color: "blue" }}>
-              //   {uniqueList.length} </span>Jobs with following matching tags:
-              //   <span style={{ color: "blue" }}>{Active.toString()}</span></p>
-              <p style={{ fontWeight: 400, marginLeft: "10px" }}>Displaying <span style={{ color: "blue" }}>
-                {jobs.length} </span>Jobs with following matching tags:
-                <span style={{ color: "blue" }}>{Active.toString()}</span></p>
-              :
-              <p style={{ fontWeight: 400, marginLeft: "10px" }}>showing {firstIndex + 1} to {lastIndex} latest jobs</p>
-            }
-            <div className={styles.navigationWrapper}>
-              <button disabled={currentPage === 1} style={{ display: "inline", margin: "5px" }} className={styles.navigation} onClick={firstPage}>
-                <i class='fas fa-step-backward' ></i>
-              </button>
-              <button disabled={currentPage === 1} style={{ display: "inline", margin: "5px" }} className={styles.navigation} onClick={previous}>
-                <i class='fas fa-caret-square-left'></i>
-              </button>
-              <span>{currentPage}</span>
-              <button disabled={currentPage === npage} style={{ display: "inline", margin: "5px" }} className={styles.navigation} onClick={next}>
-                <i class='fas fa-caret-square-right'></i>
-              </button>
-              <button disabled={currentPage === npage} style={{ display: "inline", margin: "5px" }} className={styles.navigation} onClick={last}>
-                <i class='fas fa-step-forward'></i>
-              </button>
-            </div>
+      {/* ------------------------second----------------- */}
+      <div className={styles.container}>
+        <h2 className={styles.header}>Dals & Pules</h2>
+        <div className={styles.wrapper}>
+          <button className={styles.scrollBtn} onClick={() => scrollLeft(scrollRef2)}>
+            &#8592;
+          </button>
+          <div className={styles.grid} ref={scrollRef2}>
+            {Dals.map((product) => (
+              <div key={product.id} className={styles.card}>
+                <div className={styles.discount}>{product.discount}% Off</div>
+                <img src={product.image} alt={product.name} className={styles.image} />
+                <h3 className={styles.name}>{product.name}</h3>
+                <p className={styles.weight}>{product.weight}</p>
+                <p className={styles.price}>
+                  ₹{product.price}{' '}
+                  <span className={styles.original}>₹{product.originalPrice}</span>
+                </p>
+                <button className={styles.button} onClick={() => addToCart(product)}>
+                  Add to Cart
+                </button>
+              </div>
+            ))}
           </div>
-          <div style={{ marginBottom: "5px", marginTop: "0", marginLeft: "10px" }}>
-            Show  <select onChange={(e) => { handleRecordchange(e) }}>
+          <button className={styles.scrollBtn} onClick={() => scrollRight(scrollRef2)}>
+            &#8594;
+          </button>
+        </div>
+      </div>
+
+
+      {/* ------------------------third----------------- */}
+      {/* <div className={styles.container}>
+        <h2 className={styles.header}>Rice & More</h2>
+        <div className={styles.wrapper}>
+          <button className={styles.scrollBtn} onClick={() => scrollLeft(scrollRef3)}>
+            &#8592;
+          </button>
+          <div className={styles.grid} ref={scrollRef3}>
+            {products.map((product) => (
+              <div key={product.id} className={styles.card}>
+                <div className={styles.discount}>{product.discount}% Off</div>
+                <img src={product.image} alt={product.name} className={styles.image} />
+                <h3 className={styles.name}>{product.name}</h3>
+                <p className={styles.weight}>{product.weight}</p>
+                <p className={styles.price}>
+                  ₹{product.price}{' '}
+                  <span className={styles.original}>₹{product.originalPrice}</span>
+                </p>
+                <button className={styles.button} onClick={() => addToCart(product)}>
+                  Add to Cart
+                </button>
+              </div>
+            ))}
+          </div>
+          <button className={styles.scrollBtn} onClick={() => scrollRight(scrollRef3)}>
+            &#8594;
+          </button>
+        </div>
+      </div> */}
+
+        {/* ------------------------Fourth----------------- */}
+        {/* <div className={styles.container}>
+        <h2 className={styles.header}>Seasonal Picks</h2>
+        <div className={styles.wrapper}>
+          <button className={styles.scrollBtn} onClick={() => scrollLeft(scrollRef4)}>
+            &#8592;
+          </button>
+          <div className={styles.grid} ref={scrollRef4}>
+            {products.map((product) => (
+              <div key={product.id} className={styles.card}>
+                <div className={styles.discount}>{product.discount}% Off</div>
+                <img src={product.image} alt={product.name} className={styles.image} />
+                <h3 className={styles.name}>{product.name}</h3>
+                <p className={styles.weight}>{product.weight}</p>
+                <p className={styles.price}>
+                  ₹{product.price}{' '}
+                  <span className={styles.original}>₹{product.originalPrice}</span>
+                </p>
+                <button className={styles.button} onClick={() => addToCart(product)}>
+                  Add to Cart
+                </button>
+              </div>
+            ))}
+          </div>
+          <button className={styles.scrollBtn} onClick={() => scrollRight(scrollRef4)}>
+            &#8594;
+          </button>
+        </div>
+      </div> */}
+
+        {/* ------------------------Fifth----------------- */}
+        {/* <div className={styles.container}>
+        <h2 className={styles.header}>Oil</h2>
+        <div className={styles.wrapper}>
+          <button className={styles.scrollBtn} onClick={() => scrollLeft(scrollRef5)}>
+            &#8592;
+          </button>
+          <div className={styles.grid} ref={scrollRef5}>
+            {products.map((product) => (
+              <div key={product.id} className={styles.card}>
+                <div className={styles.discount}>{product.discount}% Off</div>
+                <img src={product.image} alt={product.name} className={styles.image} />
+                <h3 className={styles.name}>{product.name}</h3>
+                <p className={styles.weight}>{product.weight}</p>
+                <p className={styles.price}>
+                  ₹{product.price}{' '}
+                  <span className={styles.original}>₹{product.originalPrice}</span>
+                </p>
+                <button className={styles.button} onClick={() => addToCart(product)}>
+                  Add to Cart
+                </button>
+              </div>
+            ))}
+          </div>
+          <button className={styles.scrollBtn} onClick={() => scrollRight(scrollRef5)}>
+            &#8594;
+          </button>
+        </div>
+      </div> */}
+
+        {/* ------------------------Sixth----------------- */}
+        {/* <div className={styles.container}>
+        <h2 className={styles.header}>Exotics & Premium</h2>
+        <div className={styles.wrapper}>
+          <button className={styles.scrollBtn} onClick={() => scrollLeft(scrollRef6)}>
+            &#8592; */}
+          {/* </button>
+          <div className={styles.grid} ref={scrollRef6}>
+            {products.map((product) => (
+              <div key={product.id} className={styles.card}>
+                <div className={styles.discount}>{product.discount}% Off</div>
+                <img src={product.image} alt={product.name} className={styles.image} />
+                <h3 className={styles.name}>{product.name}</h3>
+                <p className={styles.weight}>{product.weight}</p>
+                <p className={styles.price}>
+                  ₹{product.price}{' '}
+                  <span className={styles.original}>₹{product.originalPrice}</span>
+                </p>
+                <button className={styles.button} onClick={() => addToCart(product)}>
+                  Add to Cart
+                </button>
+              </div>
+            ))}
+          </div>
+          <button className={styles.scrollBtn} onClick={() => scrollRight(scrollRef6)}>
+            &#8594;
+          </button>
+        </div>
+      </div> */}
+
+        {/* ------------------------Seventh---------------- */}
+        {/* <div className={styles.container}>
+        <h2 className={styles.header}>Cuts & Sprouts</h2>
+        <div className={styles.wrapper}>
+          <button className={styles.scrollBtn} onClick={() => scrollLeft(scrollRef7)}>
+            &#8592;
+          </button>
+          <div className={styles.grid} ref={scrollRef7}>
+            {products.map((product) => (
+              <div key={product.id} className={styles.card}>
+                <div className={styles.discount}>{product.discount}% Off</div>
+                <img src={product.image} alt={product.name} className={styles.image} />
+                <h3 className={styles.name}>{product.name}</h3>
+                <p className={styles.weight}>{product.weight}</p>
+                <p className={styles.price}>
+                  ₹{product.price}{' '}
+                  <span className={styles.original}>₹{product.originalPrice}</span>
+                </p>
+                <button className={styles.button} onClick={() => addToCart(product)}>
+                  Add to Cart
+                </button>
+              </div>
+            ))}
+          </div>
+          <button className={styles.scrollBtn} onClick={() => scrollRight(scrollRef7)}>
+            &#8594;
+          </button>
+        </div>
+      </div> */}
+
+
+
+
+
+      
+  
+
+
     
-              {/* <option selected={lastIndex === 10} value={10}>10</option>
-              <option selected={lastIndex === 25} value={25}>25</option>
-              <option selected={lastIndex === 50} value={50}>50</option>
-              <option selected={lastIndex === 100} value={100}>100</option> */}
-              <option selected={jobsPerPageValue==10} value={10}>10</option>
-              <option selected={jobsPerPageValue==25} value={25}>25</option>
-              <option selected={jobsPerPageValue==50} value={50}>50</option>
-              <option selected={jobsPerPageValue==100} value={100}>100</option>
-            </select>  jobs per page
-          </div>
-          
-          
-         
-          <div className={styles.Uiwarpper}>
-            <ul className={styles.ul} style={{ color: 'white', fontWeight: "bold" }}>
-              <li style={{ backgroundColor: " rgb(40, 4, 99)" }} className={`${styles.li} ${styles.Jtitle}`}>Job Title</li>
-              <li style={{ backgroundColor: " rgb(40, 4, 99)" }} className={`${styles.li} ${styles.Source}`}>Posted By</li>
-              <li style={{ backgroundColor: " rgb(40, 4, 99)" }} className={`${styles.li} ${styles.CompanyName}`}>Company Name</li>
-              <li style={{ backgroundColor: " rgb(40, 4, 99)" }} className={`${styles.li} ${styles.JobType}`}>JobType</li>
-
-              {/* <li className={`${styles.li} ${styles.HliDescription}`}><b>Job description</b></li> */}
-              <li style={{ backgroundColor: " rgb(40, 4, 99)", }} className={`${styles.li} ${styles.date}`}>Posted Date
-                <p className={styles.arrowWrapper} >
-                  <i onClick={sortbyNewjobs} className={`${styles.arrow} ${styles.up}`} ></i>
-                  <i onClick={sortbyOldjobs} className={`${styles.arrow} ${styles.down}`}></i>
-                </p>
-              </li>
-              
-              <li style={{ backgroundColor: " rgb(40, 4, 99)" }} className={`${styles.li} ${styles.Location}`}>Location</li>
-
-              <li style={{ backgroundColor: " rgb(40, 4, 99)", }} className={`${styles.li} ${styles.Package}`}>CTC
-                <p className={styles.arrowWrapper}>
-
-                  <i onClick={SdescendingOrder} className={`${styles.arrow} ${styles.up}`}> </i>
-                  <i onClick={SascendingOrder} className={`${styles.arrow} ${styles.down}`}></i>
-                </p>
-              </li>
-
-              <li style={{ backgroundColor: " rgb(40, 4, 99)", }} className={`${styles.li} ${styles.experiance}`}>Experience
-                <p className={styles.arrowWrapper}>
-
-                  <i onClick={EdescendingOrder} className={`${styles.arrow} ${styles.up}`}> </i>
-                  <i onClick={EascendingOrder} className={`${styles.arrow} ${styles.down}`}></i>
-                </p>
-              </li>
-              <li style={{ backgroundColor: " rgb(40, 4, 99)" }} className={`${styles.li} ${styles.qualification}`}>Qualification</li>
-
-
-              <li style={{ backgroundColor: " rgb(40, 4, 99)" }} className={`${styles.li} ${styles.Skills}`}>Skills Required</li>
-              <li style={{ backgroundColor: " rgb(40, 4, 99)" }} className={`${styles.li} ${styles.Apply}`}>Apply</li>
-
-            </ul>
-            {PageLoader ?
-              <Puff height="80" width="80" color="#4fa94d" ariaLabel="bars-loading" wrapperStyle={{ marginLeft: "49%", marginTop: "50px" }} />
-              : ""
-            }
-            {console.log("inspecting jobs",jobs)}
-            {
-              jobs.length > 0 ?
-                jobs
-                  .map((items, i) => {
-                    return (
-                      <ul className={styles.ul} key={i}>
-                        {/* } */}
-                        {/* {console.log("inspecting jobs",jobs)} */}
-
-                        <li className={`${styles.li} ${styles.Jtitle}`} onClick={() => navigate(`/Jobdetails/${btoa(items._id)}`)} style={{ cursor: "pointer", textDecoration: "underline", color: "blue" }}>{items.jobTitle.charAt(0).toUpperCase()+items.jobTitle.substring(1)}</li>
-                        <li className={`${styles.li} ${styles.Source}`} >Itwalkin</li>
-
-                        {
-                          !items.Source ?
-
-                            <li style={{ cursor: "pointer", textDecoration: "underline" }} className={`${styles.li} ${styles.CompanyName}`}
-                              onClick={(e) => { checkEmpHalf(btoa(items.empId)) }}  >
-
-                             
-                              {items.companyName}</li>
-                            :
-                            <a style={{ cursor: "pointer", textDecoration: "underline" }} className={`${styles.li} ${styles.CompanyName}`} href={items.SourceLink} target="_blank" >
-                             
-                              {items.Source}
-
-                            </a>
-
-                        }
-
-                       
-
-                        <li className={`${styles.li} ${styles.JobType}`}>{items.jobtype}</li>
-
-                        
-                        <li className={`${styles.li} ${styles.date}`}>
-                          {new Date(items.createdAt).toLocaleString(
-                            "en-US",
-                            {
-                              month: "short",
-                              day: "2-digit",
-                              year: "numeric",
-                            }
-                          )}
-                        </li>
-                        {/* <li className={`${styles.li} ${styles.Location}`}>{items.jobLocation[0].toUpperCase() + items.jobLocation.slice(1)}</li> */}
-                        <li className={`${styles.li} ${styles.Location}`}>{items?.jobLocation[0]?.toUpperCase() + items.jobLocation.slice(1)}</li>
-                        <li className={`${styles.li} ${styles.Package}`}>{items.salaryRange}L</li>
-                        <li className={`${styles.li} ${styles.experiance}`}>{items.experiance}Y</li>
-                        <li className={`${styles.li} ${styles.qualification}`}>{items.qualification}</li>
-                        <li className={`${styles.li} ${styles.Skills}`}>{items.skills}
-                        </li>
-
-                        <li className={`${styles.li} ${styles.Apply}`}>
-                          {
-                            adminLogin ?
-                              
-                              <input type="checkbox" onClick={() => { checkBoxforDelete(items._id) }} />
-
-                              :
-                            
-                                <button className={styles.Applybutton} onClick={() => { applyforJob(items._id) }}>Apply</button>
-
-                          }
-                        </li>
-                      </ul>          
-                    )
-                  })
-                : <p style={{ marginLeft: "47%", color: "red" }}>No Record Found</p>
-            }
-          </div>
-
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <div style={{ marginTop: "14px", marginLeft: "10px" }} >
-              Show  <select onChange={(e) => { handleRecordchange(e) }}>
-                {/* <option selected={lastIndex === 10} value={10}>10</option>
-                <option selected={lastIndex === 25} value={25}>25</option>
-                <option selected={lastIndex ==
-                <option selected={lastIndex === 100} value={100}>100</option> */}
-                <option selected={jobsPerPageValue==10} value={10}>10</option>
-              <option selected={jobsPerPageValue==25} value={25}>25</option>
-              <option selected={jobsPerPageValue==50} value={50}>50</option>
-              <option selected={jobsPerPageValue==100} value={100}>100</option>
-              </select>  jobs per page
-            </div>
-
-            <div className={styles.navigationWrapper}>
-              <button disabled={currentPage === 1} style={{ display: "inline", margin: "5px" }} className={styles.navigation} onClick={firstPage}>
-                <i class='fas fa-step-backward' ></i>
-              </button>
-              <button disabled={currentPage === 1} style={{ display: "inline", margin: "5px" }} className={styles.navigation} onClick={previous}>
-                <i class='fas fa-caret-square-left'></i>
-              </button>
-              <span>{currentPage}</span>
-              <button disabled={currentPage === npage} style={{ display: "inline", margin: "5px" }} className={styles.navigation} onClick={next}>
-                <i class='fas fa-caret-square-right'></i>
-              </button>
-              <button disabled={currentPage === npage} style={{ display: "inline", margin: "5px" }} className={styles.navigation} onClick={last}>
-                <i class='fas fa-step-forward'></i>
-              </button>
-            </div>
-
-          </div>
-         
-
+{/* ......................... */}
         </>
+        
         // Mobile View
         :
         <>
@@ -1113,103 +1352,10 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
     </div>
         </div> 
         <>
-        {/* <div style={{display:"flex"}}> */}
-    {/* <h2 style={{marginLeft:"3%", fontWeight:"800", marginTop:"5px", marginBottom:"-15px"}}>Home</h2> */}
-            {/* {console.log("show",ShowSideNave)} */}
-          {/* <div className={styles.blogSearchContainer}>
-             <i style={{ visibility:showMobileSearchIcon?"visible":"hidden", color: "white", fontSize: "18px", cursor: "pointer" , marginLeft:"41px",marginTop:"-38px", position:"absolute",zIndex:"999"}} onClick={() => { searchIcon(searchKey) ;setSearchClick((currentvalue)=>!currentvalue);setShowMobileSearchIcon((currentvalue)=>!currentvalue);setShowSideNave((currentvalue)=>!currentvalue)}}
-              class="searchicon fa fa-search" ></i> */}
-            {/* <input style={{visibility:searchClick?"visible":"hidden"}} className={styles.blogInputboxsearch} type="text" placeholder='Search for a Job / Skills / Location / Experiance' onChange={(e) => { search(e) }} /> */}
-          {/* </div> */}
-          {/* </div> */}
-          {/* <div className={styles.searchBoth}>
-            <p className={styles.p}>Search </p>
-            <input className={styles.inputboxsearch} type="text" placeholder='Search for a Job / Skills / Location / Experiance' onChange={(e) => { search(e) }} />
-          </div> */}
-          {/* {Result ?
-            <h4 style={{ marginLeft: "18.5%", marginTop: "10px" }}> {jobs.length} matching Result Found  </h4>
-            : ""
-          } */}
-          {/* ...................... All Filter for Mobile */}
+       
 <div className={styles.MobLocationFilterWrapper}>
-   {/* <div ref={dropdownRef} style={{ position: "relative" }}>
-   <div style={{ display: "flex", marginLeft: "-45px", marginTop: "11px",position:"fixed" }}>
-        <button
-          onClick={() => setIsOpen((prev) => !prev)}
-          style={{background: "none",border: "none",cursor: "pointer",fontSize: "24px",color: "#007bff",}}>
-          <img className={styles.jobLocationImage} src={location} alt="Location" />
-        </button>
-        <p style={{ marginTop: "17px", fontWeight: "bold", color: "white",width:"113px" }}>
-          {selectedOption?.label}
-        </p>
-      </div>
-
-     
-      {isOpen && (
-        <div
-          style={{
-            position: "fixed",
-            top: "57px",
-            left: "126px",
-            background: "white",
-            color: "black",
-            borderRadius: "20px",
-            width: "154px",
-            padding: "15px",
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
-            animation: "fadeIn 0.2s ease-in-out",
-          }}
-        >
-          
-          <div
-            style={{
-              position: "absolute",
-              top: "-9px",
-              left: "25px",
-              width: "0",
-              height: "0",
-              borderLeft: "10px solid transparent",
-              borderRight: "10px solid transparent",
-              borderBottom: "10px solid white",
-            }}
-          ></div>
-
-        
-          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            {options.map((option) => (
-              <li
-                key={option.value}
-                onClick={() => handleSelect(option)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  padding: "10px",
-                  cursor: "pointer",
-                  borderRadius: "10px",
-                }}
-              >
-                <img
-                  src={option.img}
-                  alt={option.label}
-                  style={{ width: "22px", height: "22px", marginRight: "12px" }}
-                />
-                <span>{option.label}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div> */}
-
-         
-            {/* {
-              JobLocationTags.map((location, i) => {
-                return (
-                  <label> <input className={styles.MobJobtitleFilter} checked type="radio" disabled={location == "Chennai" || location == "Hyderabad" || location == "Mumbai" || location == "Delhi"} name="filter" onClick={() => { getLocation(location.toLowerCase()) }} />{location}</label>
-
-                )
-              })
-            } */}
+   
+           
           </div>
           <div className={styles.JobtitleFilterWrapperMobile} style={{height:"101px", marginLeft:"9px"}}>
             <buton className={Active.length === 0 ? styles.active : styles.JobtitleFilter} onClick={() => { getjobs() }}>All</buton>
@@ -1235,546 +1381,9 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
             }
           </div>
 
-          {/* <Carousel
-            swipeable={true}
-            draggable={false}
-            responsive={responsive}
-            autoPlay={false}
-            autoPlaySpeed={4000}
-            keyBoardControl={true}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px"
-            containerClass="carousel-container"
-            infinite={true}
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-          > */}
-
-            {/* <div style={{ display: "flex" }}> */}
-
-
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                <label><input className={styles.MobJobtitleFilter} type="radio" name="Rfilter" onClick={() => { getjobs() }} />All</label>
-                {
-                  jobTags.map((tags, i) => {
-                    return (
-                      <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                        className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                          tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                          styles.TagHeading : styles.MobJobtitleFilter}
-                        type="radio" name="Rfilter"
-                        onClick={() => { filterByJobTitle(tags.value) }}
-                      />{tags.value}</label>
-
-                    )
-                  }).slice(0, 4)
-                }
-
-              </div> */}
-
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(4, 9)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(9, 14)
-                }
-              </div>
-            </div> */}
-
-            {/* ....up to here is 1st div i.e button in 1st display and now from down here is 2nd div..i.e 2nd display..................................... */}
-            {/* <div style={{ display: "flex" }}>
-              <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(14, 19)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(19, 24)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(24, 29)
-                }
-              </div>
-            </div> */}
-            {/* ....from down here is 3rd div..i.e 3rd display..................................... */}
-            {/* <div style={{ display: "flex" }}>
-              <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(29, 34)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(34, 39)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(39, 44)
-                }
-              </div>
-            </div> */}
-            {/* .................from down here is 4th div..i.e 4th display....................... */}
-            {/* <div style={{ display: "flex" }}>
-              <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(44, 49)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(49, 54)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(54, 59)
-                }
-              </div>
-            </div> */}
-            {/* .................from down here is 5th div..i.e 5th display....................... */}
-
-            {/* <div style={{ display: "flex" }}>
-
-              <div className={styles.MobFilterJobTitleWrapper}>
-                {
-                  jobTags.map((tags, i) => {
-                    return (
-                      <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                        className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                          tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                          styles.TagHeading : styles.MobJobtitleFilter}
-                        type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                    )
-                  }).slice(59, 64)
-                }
-              </div> */}
-
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(64, 69)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(69, 74)
-                }
-              </div>
-            </div> */}
-
-            {/* ....ufrom down here is 6th div..i.e 6th display..................................... */}
-            {/* <div style={{ display: "flex" }}>
-              <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(74, 79)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(79, 84)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(84, 89)
-                }
-              </div>
-            </div> */}
-            {/* ....from down here is 7th div..i.e 7th display..................................... */}
-            {/* <div style={{ display: "flex" }}>
-              <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(89, 94)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(94, 99)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(99, 104)
-                }
-              </div>
-            </div> */}
-            {/* .................from down here is 8th div..i.e 8th display....................... */}
-            {/* <div style={{ display: "flex" }}>
-              <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(104, 109)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(109, 114)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(114, 119)
-                }
-              </div>
-            </div> */}
-            {/* .................from down here is 9th div..i.e 9th display....................... */}
-
-            {/* <div style={{ display: "flex" }}>
-
-              <div className={styles.MobFilterJobTitleWrapper}>
-                {
-                  jobTags.map((tags, i) => {
-                    return (
-                      <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                        className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                          tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                          styles.TagHeading : styles.MobJobtitleFilter}
-                        type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-                    )
-                  }).slice(119, 124)
-                }
-              </div> */}
-
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(124, 129)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(129, 134)
-                }
-              </div>
-            </div> */}
-
-            {/* ....from down here is 10th div..i.e 10th display..................................... */}
-            {/* <div style={{ display: "flex" }}>
-              <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(134, 139)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(139, 144)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(144, 149)
-                }
-              </div>
-            </div> */}
-            {/* ....from down here is 11th div..i.e 11th display..................................... */}
-            {/* <div style={{ display: "flex" }}>
-              <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(149, 154)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(154, 159)
-                }
-              </div> */}
-              {/* <div className={styles.MobFilterJobTitleWrapper}>
-                {jobTags.map((tags, i) => {
-                  return (
-                    <label><input disabled={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                      tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "ROLE" || tags.value === "COMPANY TYPE"}
-                      className={tags.value === "TECHNOLOGIES" || tags.value === "EDUCATION" || tags.value === "COLLEGE TYPE" || tags.value === "NOTICE PERIOD" || tags.value === "SALARY" ||
-                        tags.value === "EXPERIENCE" || tags.value === "Job Type" || tags.value === "INDUSTRY" || tags.value === "TOOLS/PROTOCOLS" || tags.value === "COMPANY TYPE" || tags.value === "ROLE" ?
-                        styles.TagHeading : styles.MobJobtitleFilter}
-                      type="radio" name="Rfilter" onClick={() => { filterByJobTitle(tags.value) }} />{tags.value}</label>
-
-                  )
-                }).slice(159, 164)
-                }
-              </div>
-            </div> */}
-
-
-          {/* </Carousel> */}
-          
-          
-          
           <div class={styles.homeMobileNextPrevBtn} style={{ diplay:"flex",flexDirection:"column",marginTop:"15px"}}>
           <div style={{ marginBottom: "5px", marginTop: "0", marginLeft: "10px" }}>
             Show  <select onChange={(e) => { handleRecordchange(e) }}>
-             
-              {/* <option selected={lastIndex === 10} value={10}>10</option>
-              <option selected={lastIndex === 25} value={25}>25</option>
-              <option selected={lastIndex === 50} value={50}>50</option>
-              <option selected={lastIndex === 100} value={100}>100</option> */}
               <option selected={jobsPerPageValue==10} value={10}>10</option>
               <option selected={jobsPerPageValue==25} value={25}>25</option>
               <option selected={jobsPerPageValue==50} value={50}>50</option>
@@ -1827,22 +1436,13 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
                             })
                             navigate(`/Jobdetails/${btoa(job._id)}`)
                           }} style={{width:"100%", whiteSpace:"normal"}}>{job.jobTitle.charAt(0).toUpperCase()+job.jobTitle.substring(1)} </p>
-                          {/* <p className={styles.Date}>{new Date(job.createdAt).toLocaleString(
-                            "en-US",
-                            {
-                              day: "2-digit",
-                              month: "short",
-                              year: "numeric",
-                            }
-                          )
-                          } </p> */}
+                         
 
                         </div>
                          
                        
                         <div className={styles.JobPagecompanyNameLocationWrapper}   >
-                          {/* <img className={styles.logo} src={job.Logo} /> */}
-                          {/* {console.log("home obj",job)} */}
+                         
                           <img className={styles.homePageCompanyLogo} src={ CompanyLogo} />
 
                           <div class={styles.jobTitleCompanyName}>
@@ -1856,7 +1456,7 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
                           </div>
                         </div>
                         <  img className={styles.jobLocationImage} src={location} />
-                        {/* <span className={styles.jobLocation}>{job.jobLocation[0].toUpperCase() + job.jobLocation.slice(1)} ,</span> */}
+                        
                         <span className={styles.jobLocation}>{job?.jobLocation[0]?.toUpperCase() + job.jobLocation.slice(1)} ,</span>
                     
                         <span className={styles.qualificationAndExperiance}>
@@ -1864,7 +1464,7 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
                           <  img className={styles.graduationImage} src={graduation} />
 
                           {job.qualification}, {job.experiance}Y Exp ,   {job.jobtype}
-                          {/* <span className={styles.jobtypeAndDate}> {job.jobtype}</span> */}
+                          
                         </span><br></br>
 
                         <span className={styles.jobtypeAndDate}>Source</span> :
@@ -1913,10 +1513,7 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
           <div style={{ marginBottom: "5px", marginTop: "0", marginLeft: "10px" }}>
             Show  <select onChange={(e) => { handleRecordchange(e) }}>
              
-              {/* <option selected={lastIndex === 10} value={10}>10</option>
-              <option selected={lastIndex === 25} value={25}>25</option>
-              <option selected={lastIndex === 50} value={50}>50</option>
-              <option selected={lastIndex === 100} value={100}>100</option> */}
+            
               <option selected={jobsPerPageValue==10} value={10}>10</option>
               <option selected={jobsPerPageValue==25} value={25}>25</option>
               <option selected={jobsPerPageValue==50} value={50}>50</option>

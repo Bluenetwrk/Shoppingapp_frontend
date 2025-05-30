@@ -1,4 +1,146 @@
 
+  .container {
+    padding: 20px;
+    max-width: 100%;
+  }
+  
+  .header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-left: 75px;
+  }
+  
+  /* Wrapper around scroll container + buttons */
+  .wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Scroll buttons styling */
+  .scrollBtn {
+    background-color: #2874f0;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+    margin: 0 8px;
+  }
+  
+  .scrollBtn:hover {
+    background-color: #0b59d7;
+  }
+  
+  /* Horizontal scrolling container */
+  .grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px;
+    padding: 10px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+    flex-grow: 1; /* so it fills the space between buttons */
+  }
+  
+  /* Scrollbar styling for WebKit browsers */
+  .grid::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .grid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .grid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Card styling */
+  .card {
+    flex: 0 0 220px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .discount {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    align-self: flex-start;
+    margin-bottom: 8px;
+  }
+  
+  .image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 12px;
+  }
+  
+  .name {
+    font-size: 18px;
+    margin: 8px 0;
+  }
+  
+  .weight {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .original {
+    font-weight: normal;
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 8px;
+    font-size: 14px;
+  }
+  
+  .button {
+    background-color: transparent;
+    color: red;
+    border: 2px solid red;
+    border-radius: 4px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: red;
+    color: white;
+  }
+  
+
+  
+
+  
 .tableContainer {
     width: 95%;
     border-radius: 15px;
@@ -658,6 +800,7 @@ background-color: white;
             margin-right: 10px;
             width:96%;
             margin-left: 14px;
+            height: 161px;
 }
 .JobtitleFilterWrapper:hover{
     scrollbar-color:  rgb(40, 4, 99) white ;

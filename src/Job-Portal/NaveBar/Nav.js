@@ -131,6 +131,10 @@ function Nav(props) {
     setStuopen(true);
   };
 
+  const handleNewLogin=()=>{
+    navigate("/newlogin")
+  }
+
   const handleStuClose = () => {
     setStuopen(false);
   };
@@ -387,6 +391,7 @@ function Nav(props) {
                       <p onClick={() => { navigate("/JobSeekerLogin") }}>Job Seeker Login</p> */}
                         <p onClick={() => { handleEmpOpen(); handleStuClose() }}>Merchant Login</p>
                         <p onClick={() => { handleStuOpen(); handleClose() }}>Customer Login</p>
+                        <p onClick={() => { handleNewLogin(); handleClose() }}>New Login</p>   
                       </div>
                     </div>
 
