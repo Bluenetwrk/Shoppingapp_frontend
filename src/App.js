@@ -61,6 +61,11 @@ import socketIO from 'socket.io-client';
 import SidebarNav from "./Job-Portal/BigSideNav";
 import useScreenSize from '../src/Job-Portal/SizeHook';
 import AskQuestion from "./Job-Portal/PostJobs/postQuesion";
+import SignInPage from "./NewLogin/SignInPage/SignInPage";
+import NewToITWalkin from "./NewLogin/NewToITWalkin/NewToITWalkin";
+import CreateAccount from "./NewLogin/CreateAccount/CreateAccount";
+import SignIn from "./NewLogin/Sign/SignIn";
+import OtpAuth from "./NewLogin/OtpAuth/OtpAuth";
 
 axios.defaults.baseURL = "https://itwalkin-backend-testrelease-2-0-1-0824-ns0g.onrender.com" // Render Test
 
@@ -421,7 +426,11 @@ const [showMobileSearchIcon, setShowMobileSearchIcon]= useState(true)
         {/* <div style={ShowSideNave && screenSize.width > 850 ? { marginLeft: "210px" } : { marginLeft: "-3px"}}> */}
       
           <Routes>
-
+            <Route path="/newlogin" element={<SignInPage/>}/>
+            <Route path="/newuser" element={<NewToITWalkin/>}/>
+            <Route path="/create-account" element={<CreateAccount/>}/>
+            <Route path="/sign" element={<SignIn/>}/>
+            <Route path="/otpAuth" element={<OtpAuth/>}/>
             <Route path="/" element={
               <Home 
               showMobileSearchIcon={showMobileSearchIcon} setShowMobileSearchIcon={setShowMobileSearchIcon}

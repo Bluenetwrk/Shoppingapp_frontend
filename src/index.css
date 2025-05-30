@@ -24,7 +24,7 @@ code {
 
 .BigNavWrapper{
   height: 100vh;
-  background-color: rgb(40, 4, 99);
+  background-color: #408d97;
   z-index: 100;
   transition: ease-in-out 0.5s;
   position: fixed;

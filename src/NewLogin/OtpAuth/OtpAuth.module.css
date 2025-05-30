@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    padding: 30px 25px;
+    width: 380px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .phone {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .phone a {
+    color: #0066c0;
+    text-decoration: none;
+  }
+  
+  .info {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .continueBtn {
+    background-color: rgb(40,4,99);
+    border: 1px solid rgb(40,4,99);
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 25px;
+  }
+  
+  .resend {
+    display: inline-block;
+    margin: 15px 0 10px;
+    font-size: 14px;
+    color: #0066c0;
+    text-decoration: none;
+  }
+  
+  .separator {
+    text-align: center;
+    margin: 10px 0;
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .altBtn {
+    width: 100%;
+    background: rgb(40,4,99);
+    border: 1px solid #adb1b8;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 8px;
+    cursor: pointer;
+    color:white;
+    border-radius: 25px;
+  }
+  
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+  }
+  
+  .footer a {
+    margin: 0 10px;
+    color: #0066c0;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  
+  .footer p {
+    margin-top: 5px;
+    color: #888;
+  }
+  
