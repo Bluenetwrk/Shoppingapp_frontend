@@ -1,5 +1,121 @@
-
-  .container {
+.cardContainer{
+    display: flex;
+        justify-content: center;
+        margin-top: 21px;
+}
+.dealsContainer {
+    background-color:#5fadb7;
+    padding: 16px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    width:86%;
+  }
+  
+  .dealsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  
+  .dealsTitle {
+    font-size: 18px;
+    margin: 0;
+    color:white;
+  }
+  
+  .dealsArrow {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dealsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 12px;
+  }
+  
+  
+  .dealsCard {
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    padding: 8px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .dealsDiscount {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #ff3c3c;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .dealsImage {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 6px;
+  }
+  
+  .dealsName {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+  
+  .dealsWeight {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 4px;
+  }
+  
+  .dealsPriceRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+  
+  .dealsPrice {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .dealsOriginal {
+    text-decoration: line-through;
+    font-size: 13px;
+    color: #888;
+  }
+  
+  .dealsButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+ .container {
     padding: 20px;
     max-width: 100%;
   }

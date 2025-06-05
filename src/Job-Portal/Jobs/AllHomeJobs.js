@@ -1276,6 +1276,54 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
         // Mobile View
         :
         <>
+
+          <div className={styles.cardContainer}>
+          <div className={styles.dealsContainer}>
+      <div className={styles.dealsHeader}>
+        <h3 className={styles.dealsTitle}>Attas&more</h3>
+        <button className={styles.dealsArrow}>→</button>
+      </div>
+      <div className={styles.dealsGrid}>
+        {attas.slice(0, 4).map((product) => (
+          <div key={product.id} className={styles.dealsCard}>
+            <div className={styles.dealsDiscount}>{product.discount}% Off</div>
+            <img src={product.image} alt={product.name} className={styles.dealsImage} />
+            <div className={styles.dealsName}>{product.name}</div>
+            <div className={styles.dealsWeight}>{product.weight}</div>
+            <div className={styles.dealsPriceRow}>
+              <span className={styles.dealsPrice}>₹{product.price}</span>
+              <span className={styles.dealsOriginal}>₹{product.originalPrice}</span>
+            </div>
+            <button className={styles.dealsButton}>Add to Cart</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div className={styles.cardContainer}>
+          <div className={styles.dealsContainer}>
+      <div className={styles.dealsHeader}>
+        <h3 className={styles.dealsTitle}>Dals & Pules</h3>
+        <button className={styles.dealsArrow}>→</button>
+      </div>
+      <div className={styles.dealsGrid}>
+        {Dals.slice(0, 4).map((product) => (
+          <div key={product.id} className={styles.dealsCard}>
+            <div className={styles.dealsDiscount}>{product.discount}% Off</div>
+            <img src={product.image} alt={product.name} className={styles.dealsImage} />
+            <div className={styles.dealsName}>{product.name}</div>
+            <div className={styles.dealsWeight}>{product.weight}</div>
+            <div className={styles.dealsPriceRow}>
+              <span className={styles.dealsPrice}>₹{product.price}</span>
+              <span className={styles.dealsOriginal}>₹{product.originalPrice}</span>
+            </div>
+            <button className={styles.dealsButton}>Add to Cart</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
          <div className={styles.blogSearchContainer}>
              <i style={{ visibility:showMobileSearchIcon?"visible":"hidden", color: "white", fontSize: "18px", cursor: "pointer" , marginLeft:"41px",marginTop:"-38px", position:"fixed",zIndex:"999"}} onClick={() => { searchIcon(searchKey) ;setSearchClick((currentvalue)=>!currentvalue);setShowMobileSearchIcon((currentvalue)=>!currentvalue);setShowSideNave((currentvalue)=>!currentvalue)}}
               class="searchicon fa fa-search" ></i>
@@ -1283,7 +1331,7 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
           </div>
        <div style={{position:"fixed",zIndex:"999",top:"-4px",left:"175px"}}>
        <div ref={dropdownRef} style={{ position: "relative" }}>
-   <div style={{ display: "flex", marginLeft: "-45px", marginTop: "11px",position:"fixed" }}>
+   <div style={{ display: "flex",alignItems: "center", marginLeft: "-45px", marginTop: "0px",position:"fixed" }}>
         <button
           onClick={() => setIsOpen((prev) => !prev)}
           style={{background: "none",border: "none",cursor: "pointer",fontSize: "24px",color: "#007bff",}}>
@@ -1353,11 +1401,11 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
         </div> 
         <>
        
-<div className={styles.MobLocationFilterWrapper}>
+{/* <div className={styles.MobLocationFilterWrapper}>
    
            
-          </div>
-          <div className={styles.JobtitleFilterWrapperMobile} style={{height:"101px", marginLeft:"9px"}}>
+          </div> */}
+          {/* <div className={styles.JobtitleFilterWrapperMobile} style={{height:"101px", marginLeft:"9px"}}>
             <buton className={Active.length === 0 ? styles.active : styles.JobtitleFilter} onClick={() => { getjobs() }}>All</buton>
             {
               jobTags.map((tags, i) => {
@@ -1379,9 +1427,9 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
                 )
               })
             }
-          </div>
+          </div> */}
 
-          <div class={styles.homeMobileNextPrevBtn} style={{ diplay:"flex",flexDirection:"column",marginTop:"15px"}}>
+          {/* <div class={styles.homeMobileNextPrevBtn} style={{ diplay:"flex",flexDirection:"column",marginTop:"15px"}}>
           <div style={{ marginBottom: "5px", marginTop: "0", marginLeft: "10px" }}>
             Show  <select onChange={(e) => { handleRecordchange(e) }}>
               <option selected={jobsPerPageValue==10} value={10}>10</option>
@@ -1410,8 +1458,8 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
             {PageLoader ?
             <Puff height="80" width="80" color="#4fa94d" ariaLabel="bars-loading" wrapperStyle={{ marginLeft: "40%", marginTop: "50px" }} />
             : ""
-          }
-          <div id={styles.JobCardWrapper} >
+          } */}
+          {/* <div id={styles.JobCardWrapper} >
             {
               jobs.length > 0 ?
 
@@ -1470,7 +1518,7 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
                         <span className={styles.jobtypeAndDate}>Source</span> :
 
                         <> <span className={styles.skills}>ItWalkin</span><br></br></>
-                        {/* } */}
+
 
                         <div className={styles.skillWrapper}>
                           <span className={styles.skillsHeading}>Skills: </span><span className={styles.skills}>{job.skills}</span><br></br>
@@ -1508,8 +1556,8 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
 
             }
 
-          </div>
-          <div class={styles.homeMobileNextPrevBtn} style={{ diplay:"flex",flexDirection:"column",marginTop:"15px"}}>
+          </div> */}
+          {/* <div class={styles.homeMobileNextPrevBtn} style={{ diplay:"flex",flexDirection:"column",marginTop:"15px"}}>
           <div style={{ marginBottom: "5px", marginTop: "0", marginLeft: "10px" }}>
             Show  <select onChange={(e) => { handleRecordchange(e) }}>
              
@@ -1519,9 +1567,9 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
               <option selected={jobsPerPageValue==50} value={50}>50</option>
               <option selected={jobsPerPageValue==100} value={100}>100</option>
             </select>  jobs per page
-          </div>
+          </div> */}
           
-          <div className={styles.navigationWrapper} style={{textAlign:"left",marginLeft:"6px"}}>
+          {/* <div className={styles.navigationWrapper} style={{textAlign:"left",marginLeft:"6px"}}>
               <button disabled={currentPage === 1} style={{ display: "inline", marginLeft: "5px" }} className={styles.navigation} onClick={firstPage}>
                 <i class='fas fa-step-backward' ></i>
               </button>
@@ -1535,8 +1583,8 @@ function Home({nopageFilter,setNoPageFilter,searchKey, setsearchKey,Filtereredjo
               <button disabled={currentPage === npage} style={{ display: "inline", margin: "5px" }} className={styles.navigation} onClick={last}>
                 <i class='fas fa-step-forward'></i>
               </button>
-            </div>
-            </div>
+            </div> */}
+            {/* </div> */}
           <div style={{ marginTop: "20px", }}>
             <Footer />
           </div>

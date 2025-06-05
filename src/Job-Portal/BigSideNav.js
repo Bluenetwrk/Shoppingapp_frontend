@@ -61,7 +61,7 @@ function SidebarNav(props) {
       {/* <p style={{marginLeft:"80%"}} onClick={()=>{props.setShowSideNaveProps((prev)=>!prev)}}> &#10005;</p> */}
       <div style={{ marginTop:"-15px"}}>
          <div style={{display:"flex",marginTop:"10px",marginRight:"6px"}} >
-            <input className={Styles.blogInputboxsearch}  type="text" placeholder='Search for a Job / Skills / Location / Experiance' onChange={(e) => { 
+            <input style={{height:"15px"}} className={Styles.blogInputboxsearch}  type="text" placeholder='Search here' onChange={(e) => { 
                                                                                                                                  if(empHome)
                                                                                                                                     props.searchs(e)
                                                                                                                                  else if(location.pathname==="/Blogs"){
@@ -82,7 +82,7 @@ function SidebarNav(props) {
                                                                                                                                   console.log("else entered")   
                                                                                                                                  }
                                                                                                                                 }} />
-            <i style={{marginLeft:"0px",fontSize:"20px",marginTop:"7px"}} class="fa fa-search" onClick={() => { props.searchIcon(props.searchKey);props.ChangeSideNaveBar();props.setSearchClick(false)}}></i>
+            <i style={{marginLeft:"0px",fontSize:"20px",marginTop:"17px"}} class="fa fa-search" onClick={() => { props.searchIcon(props.searchKey);props.ChangeSideNaveBar();props.setSearchClick(false)}}></i>
           </div>
           
         {/* <p onClick={()=>{navigate("/")}} className={`${Styles.p} `}>Home </p> */}
