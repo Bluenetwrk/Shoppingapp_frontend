@@ -19,15 +19,16 @@ function Footer() {
     <>
       <div className={Styles.footerWraper}>
 
-          <div style={{display:"flex", marginLeft:"20px", flexWrap:"wrap"}}>
-          <div style={{}}>
-             <img className={Styles.MobIwalkinLogologo} style={{width:"140px"}} src={Itwalkinlogo} />
+          <div style={{display:"flex", marginLeft:"20px", flexWrap:"wrap",alignItems:"center"}}>
+          <div>
+             {/* <img className={Styles.MobIwalkinLogologo} style={{width:"140px"}} src={Itwalkinlogo} /> */}
+             <h2 style={{color:"white"}}>Shopping App</h2>
             </div>
             <div className={Styles.brands}>
               {/* <a> <i className='fa-brands fa-facebook-square'></i> </a>
               <a> <i className='fa-brands fa-twitter-square'></i> </a>
               <a onClick={Linkedin}> <i class='fa-brands fa-linkedin'></i> </a> */}
-               <i className="fa-brands fa-linkedin" style={{ fontSize: "xx-large", marginBottom: "30px" }}  onClick={Linkedin}></i>
+               {/* <i className="fa-brands fa-linkedin" style={{ fontSize: "xx-large", marginBottom: "30px" }}  onClick={Linkedin}></i> */}
             </div>
             </div>
 

@@ -579,7 +579,7 @@ className={props.ShowSideNave ? "fas fa-times" : "fas fa-bars"} ref={SimgRef} on
                     <div className={Styles.ITwalkinWrapperHomeMobile}>
                       {/* <p className={Styles.ITwalkinMob}>ITwalkin</p>
                       <p className={Styles.onlyforITjobsMob}>Only for IT jobs</p> */}
-                        <img className={Styles.MobIwalkinLogologo} src={Itwalkinlogo} />
+                        <h3 style={{color:"white"}}>Shopping App</h3>
 
                     </div>
 
@@ -590,8 +590,8 @@ className={props.ShowSideNave ? "fas fa-times" : "fas fa-bars"} ref={SimgRef} on
                       <img className={`${Styles.MobloginLogo} `} src={logIn} ref={imgRef} onClick={() => setShowprofile((prev) => !prev)} />
                       {showprofile ?
                         <div className={Styles.MobHomeDropdownwrapper} ref={menuRef} >
-                          <p onClick={() => { navigate("/EmployeeLogin") }}>Employer Login </p>
-                          <p onClick={() => { navigate("/JobSeekerLogin") }}>Job Seeker Login</p>
+                          <p onClick={() => { navigate("/EmployeeLogin") }}>Merchant Login </p>
+                          <p onClick={() => { navigate("/JobSeekerLogin") }}>Customer Login</p>
                         </div>
                         : ""}
                     </div>
